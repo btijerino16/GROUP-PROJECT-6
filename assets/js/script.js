@@ -29,21 +29,37 @@ function youtubeApi(query) {
 }
 
 // youtubeApi("taylor swift");
-function getMovieId(movieQuery) {
-    var movieQuery = "Thor";
+
+
+function getMovieStars(movieQuery) {
+    var movieQuery = "Iron Man";
     var imdbApiKey = "k_ta4dd4a1";
-    var imdbURL = `https://imdb-api.com/en/API/SearchMovie/${imdbApiKey}/${movieQuery}`;
-    
-    fetch(imdbURL)
-    .then(function(response){
-        response.json()
-        .then(function(data){
-            console.log(data);
-            var movieId = data.results[0].id;
-            console.log("Movie ID: " + movieId);
+    var titleApiURL = `https://imdb-api.com/en/API/SearchMovie/${imdbApiKey}/${movieQuery}`;
+
+    fetch(titleApiURL)
+        .then(function (response) {
+            response.json()
+                .then(function (data) {
+
+                    var movieId = data.results[0].id;
+                    console.log("Movie ID: " + movieId);
+
+                    var idApiURL = `https://imdb-api.com/en/API/Title/${imdbApiKey}/${movieId}`;
+
+                    fetch(idApiURL)
+                        .then(function (response) {
+                            response.json()
+                                .then(function (data) {
+                                    var star = data.actorList[0].name;
+                                    console.log("Star: " + star);                                 
+                                })
+                        })
+                })
         })
-    })
 };
+getMovieStars();
+
+
 
 
 
