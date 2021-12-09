@@ -1,9 +1,9 @@
-function createIframe(videoId){
+function createIframe(videoId) {
     var ifrm = document.createElement("iframe");
-        ifrm.setAttribute("src", ("https://www.youtube.com/embed/" + videoId));
-        ifrm.style.width = "640px";
-        ifrm.style.height = "480px";
-        document.body.appendChild(ifrm);
+    ifrm.setAttribute("src", ("https://www.youtube.com/embed/" + videoId));
+    ifrm.style.width = "640px";
+    ifrm.style.height = "480px";
+    document.body.appendChild(ifrm);
 }
 
 function youtubeApi(query) {
@@ -14,9 +14,10 @@ function youtubeApi(query) {
     var options = {
         part: 'snippet',
         key: key,
-        maxResults: 20,
+        maxResults: 1,
         q: query,
-        type: "video"
+        type: "video",
+        videoEmbeddable: "true"
     }
 
     $.getJSON(URL, options).then(function (data) {
@@ -26,6 +27,4 @@ function youtubeApi(query) {
     });
 }
 
-youtubeApi("taylor swift");
-
-
+// youtubeApi("taylor swift");
