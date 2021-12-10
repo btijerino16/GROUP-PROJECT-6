@@ -1,7 +1,7 @@
-## Move Buffs!
+## SHOW TUNES
 
 
 
 As a movie-goer
-I want to know about more about the main-stars of a movie 
-So that I can keep up-to-date with their work
+I want to know the original sound track
+So that I can find the song that I like easily 
