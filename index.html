@@ -6,43 +6,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Movie Buff</title>
 </head>
 
 <body>
+    <!-- Header -->
+    <header class="card-panel grey lighten-4">
+        <h3 class="center">Movie Buff!</h3>
+    </header>
 
-    <header>MOVIE BUFF</header>
 
     
-        <div class ="row">
-          <form>
-            <div class="input-field col s12 m3">
-              <input id="required>
-        
-              <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-              <i class="material-icons">close</i>
-            </div>
-          </form>
+    <div class="row">
+        <!-- Search Form -->
+        <div class="row col s12 col m3">
+            <form id="searchForm">
+                <div class="row">
+                    <div class="input-field">
+                        <h4>Search Here</h4>
+                        <input placeholder="Movie" id="search-it" type="text">
+
+                    </div>
+                </div>
         </div>
-      
 
-   <!-- Page Layout here -->
-   <div class="row">
-
-    <div class="col s3">
-      <!-- Grey navigation panel -->
+<!-- video container  -->
+        <div class="row col s12 col m9" id="videoContainer"></div>
     </div>
 
-    <div class="col s9">
-      <!-- Teal page content  -->
-    </div>
-
-  </div>
 
 
-        
-            
+
+
+
+
+<script src="https://apis.google.com/js/api.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="assets/js/script.js"></script>
 
 </body>
 
