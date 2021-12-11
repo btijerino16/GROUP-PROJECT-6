@@ -7,24 +7,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Link Icon to landing page-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <title>Movie Buff</title>
 </head>
 
 <body>
     <!-- Header -->
-    <header class="hero card-panel grey lighten-4">
+    <header class="hfont card-panel grey lighten-4">
         <h3 class="center">Movie Buff!</h3>
+
     </header>
 
     <!--Search Form -->
     <main class="row">
-        <!-- Test -->
         <div class="row">
-            <form class="col s12 col m3">
+            <form class="z-depth-2 col s12 col m3">
                 <div class="row">
-                    <div class="input-field col s6">
+                    <div class="input-field col s12">
                         <input placeholder="Movie" id="search-it" type="text" class="validate">
-                        <a class="waves-effect waves-light btn">Search</a>
+                        <button class="waves-effect waves-light btn">Search</button>
+                        <span>
+                            <i class="small material-icons">local_movies</i>
+                        </span>
                         <label for="first_name"></label>
                     </div>
             </form>
@@ -32,8 +38,8 @@
     </main>
 
 
-<!-- Linked JS-->
-<script src="assets/js/script.js"></script>
+    <!-- Linked JS-->
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
