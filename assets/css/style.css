@@ -1,3 +1,23 @@
-.title {
-    background-image:url('images/film-background.jpeg')
+
+
+
+
+h2 {
+  font-style: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 650%;
+    text-align: center;
+    flex-wrap: wrap;
+    background-image: url("../images/film-background.jpeg");
+background-size: cover;
+background-position: center;
+color: orange;
+
+}
+
+.img {
+    background-image: url(/assets/images/film-background.jpeg);
+    position: sticky;
+    float: left;
+    
 }
