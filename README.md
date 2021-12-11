@@ -1,7 +1,7 @@
-## SHOW TUNES
+## Movie Buff
 
 
 
-As a movie-goer
-I want to know the original sound track
-So that I can find the song that I like easily 
+As a movie-goer,
+I want to get more information on an actor by searching his name on an application
+
