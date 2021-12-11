@@ -12,12 +12,6 @@ h2 {
 background-size: cover;
 background-position: center;
 color: orange;
+position: sticky;
 
-}
-
-.img {
-    background-image: url(/assets/images/film-background.jpeg);
-    position: sticky;
-    float: left;
-    
 }
