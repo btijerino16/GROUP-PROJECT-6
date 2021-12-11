@@ -3,6 +3,7 @@ var searchForm = document.getElementById('searchForm');
 var videoContainer = document.getElementById('videoContainer');
 var posterContainer = document.getElementById('posterContainer');
 var pastSearches = document.getElementById('pastSearches');
+var clearBtn = document.getElementById('clearBtn');
 // movies array
 var movies = [];
 
@@ -10,6 +11,8 @@ loadHistory();
 
 function handleInputSubmit(event) {
     event.preventDefault();
+    // show 'clear' button
+    clearBtn.classList.remove("hide");
 
     // get movie name from search input
     var movieName = searchInput.value;
@@ -22,11 +25,8 @@ function handleInputSubmit(event) {
     // clear out search input
     searchInput.value = "";
 
-
     getMovieInfo(movieName);
-
     saveMovies(movieName);
-
 }
 
 function createIframe(videoId) {
@@ -168,8 +168,17 @@ function loadHistory() {
 // Event listeners
 searchForm.addEventListener('submit', handleInputSubmit);
 
-pastSearches.addEventListener('click', function (event) {
+clearBtn.addEventListener('click', function(){
+    // clear local storage and html
+    localStorage.clear();
+    pastSearches.innerHTML = "";
+    posterContainer.innerHTML ="";
+    videoContainer.innerHTML = "";
+    
+})
 
+pastSearches.addEventListener('click', function (event) {
+    // use data attribute to get movie info
     var pastMovieSearch = event.target.getAttribute('data-value');
     //console.log(pastMovieSearch);
     getMovieInfo(pastMovieSearch);

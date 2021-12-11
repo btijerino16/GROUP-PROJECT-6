@@ -15,16 +15,16 @@
     <!-- Header -->
     <header class="card-panel grey lighten-4">
         <h3 class="center">Movie Buff!</h3>
-        
+
     </header>
-    
+
 
 
 
     <div class="row">
         <!-- Search Form -->
         <div class="row col s12 col m3">
-            
+
             <form id="searchForm">
                 <div class="row">
                     <div class="input-field">
@@ -32,28 +32,25 @@
                         <input placeholder="Movie" id="search-it" type="text">
 
                     </div>
-                    
-                    
 
+                    <!-- Clear Button-->
+                    <button class="btn #424242 grey darken-3 hide" id="clearBtn">Clear <i
+                            class="material-icons">cancel</i></button>
                 </div>
+                <!--Past searches section-->
                 <div id="pastSearches"></div>
         </div>
-      <section class="center-align col s12 col m9" id="movieContent">
-                  <!-- video container  -->
-        <div class="video-container" id="videoContainer"></div>
+        
+        <section class="center-align col s12 col m9" id="movieContent">
+            <!-- video container  -->
+            <div class="video-container" id="videoContainer"></div>
 
-        <!-- poster container-->
-        <div class="center-align" id="posterContainer"></div>
+            <!-- poster container-->
+            <div class="center-align" id="posterContainer"></div>
 
-      </section>  
+        </section>
 
     </div>
-
-
-
-
-
-
 
     <script src="https://apis.google.com/js/api.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
