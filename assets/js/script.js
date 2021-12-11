@@ -2,11 +2,16 @@ var searchInput = document.getElementById('search-it');
 var searchForm = document.getElementById('searchForm');
 var videoContainer = document.getElementById('videoContainer');
 
+
 function handleInputSubmit(event) {
     event.preventDefault();
+    // clear out video container
+    videoContainer.innerHTML = "";
     // get movie name from search input
     var movieName = searchInput.value;
     console.log("Movie name: " + movieName);
+
+    searchInput.value = ""; 
 
     getMovieStars(movieName);
 
@@ -68,7 +73,7 @@ function getMovieStars(movieQuery) {
                                     var star = data.actorList[0].name;
                                     console.log("Star: " + star);
                                     // retrieve the videos from youtube for the movie star
-                                    youtubeApi(star);
+                                    youtubeApi(star);                                    
                                 })
                         })
                 })
