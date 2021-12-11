@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Movie Buff</title>
 </head>
 
@@ -14,13 +15,16 @@
     <!-- Header -->
     <header class="card-panel grey lighten-4">
         <h3 class="center">Movie Buff!</h3>
+        
     </header>
+    
 
 
 
     <div class="row">
         <!-- Search Form -->
         <div class="row col s12 col m3">
+            
             <form id="searchForm">
                 <div class="row">
                     <div class="input-field">
@@ -30,9 +34,15 @@
                     </div>
                 </div>
         </div>
+      <section class="center-align col s12 col m9" id="movieContent">
+                  <!-- video container  -->
+        <div class="video-container" id="videoContainer"></div>
 
-        <!-- video container  -->
-        <div class="center-align col s12 col m9" id="videoContainer"></div>
+        <!-- poster container-->
+        <div class="center-align" id="posterContainer"></div>
+
+      </section>  
+
     </div>
 
 
