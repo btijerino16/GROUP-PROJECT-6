@@ -2,44 +2,63 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- Keep it up for a possiblity -->
-    <link rel="search-index.html" href="/assets/js/search-index.html">
-    <title>Movie Buffs!</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Movie Buff</title>
+
 </head>
 
 <body>
-<!-- Header -->
-<header class="card-panel grey lighten-4">
-    <h3 class="center">Movie Buff!</h3>
-</header>
-
-<!-- -->
-<div class="flex-row">
-<main class="row">
-
-    <div class="row">
-        <div class="col s6"></div>
-        <input id="searchbar" onkeyup="search_actor()" type="text"
-        name="search" placeholder="Search actors..">
-        <search col 3>
-
-        </search>
+  <!-- Header -->
+  <header>
+    <div class="card-panel grey lighten-4">
+      <div class id="image background">
+        <h2 class="center">Movie Buff!</h2>
+      </div>
     </div>
+  </header>
 
 
-    <div class ="container">
- <!-- ordered list -->
 
 
-    </div>
+  <!-- Test -->
+  <div class="row">
+    <form class="col s12">
+      <div class="input-field col s6">
+        <input type="text" id="actor list">
+        <button onclick="addLi()">Search</button>
+        <label for="first_name"></label>
+
+    </form>
+  </div>
+  </div>
 
 
-</main>
-<script src ="assets/js/script.js"></script>
+  <div class="center-align col s12 col m9" id="videoContainer">
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+  </main>
+
 </body>
 
 </html>

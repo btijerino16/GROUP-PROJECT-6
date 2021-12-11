@@ -1,3 +1,27 @@
-.title {
-    background-image:url('images/film-background.jpeg')
-}
+h2 {
+    font-style: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 650%;
+      text-align: center;
+      flex-wrap: wrap;
+      background-image: url("../images/film-background.jpeg");
+  background-size: cover;
+  background-position: center;
+  color: orange;
+  position: sticky;
+  
+  }
+
+  body {
+      background-color: black;
+  }
+
+  .button {
+      font-size: large;
+      color: ghostwhite;
+  }
+  
+  .input-field input[type=text] {
+      color: floralwhite;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
