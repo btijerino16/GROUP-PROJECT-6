@@ -7,3 +7,26 @@ header {
 .hfont {
     font-family: cursive;
    }
+
+/* Search */
+main h5 {
+    font-weight: bolder;
+    padding-inline-start: 15px;
+
+   }
+/* Form */
+
+/* First <div> nested under <main> */
+.d1 {
+    display:flexbox;
+    padding-left: 50px;
+    padding-top: 30px;
+}
+
+/* Button Element */
+.input-field {
+    display: flex;
+}
+
+
+/* Footer */
