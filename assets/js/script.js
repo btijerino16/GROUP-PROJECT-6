@@ -11,8 +11,7 @@ loadHistory();
 
 function handleInputSubmit(event) {
     event.preventDefault();
-    // show 'clear' button
-    clearBtn.classList.remove("hide");
+
 
     // get movie name from search input
     var movieName = searchInput.value;
@@ -20,55 +19,52 @@ function handleInputSubmit(event) {
     if (!movieName) {
         return;
     }
-    //console.log("Movie name: " + movieName);
+    getMovieInfo(movieName);
 
     // clear out search input
     searchInput.value = "";
-
-    getMovieInfo(movieName);
-    saveMovies(movieName);
 }
 
-function createIframe(videoId) {
-    var ifrm = document.createElement("iframe");
-    apiURL = `https://www.youtube.com/embed/${videoId}`;
-    ifrm.setAttribute("src", (apiURL));
-    // ifrm.style.width = "640px";
-    // ifrm.style.height = "480px";
-    // document.body.appendChild(ifrm);
+// function createIframe(videoId) {
+//     var ifrm = document.createElement("iframe");
+//     apiURL = `https://www.youtube.com/embed/${videoId}`;
+//     ifrm.setAttribute("src", (apiURL));
+//     // ifrm.style.width = "640px";
+//     // ifrm.style.height = "480px";
+//     // document.body.appendChild(ifrm);
 
-    // set video size to fit container with 4:3 ratio
-    ifrm.style.width = "100%";
-    ifrm.style.height = "75%";
-    // append iframe to video container
-    videoContainer.append(ifrm);
-}
+//     // set video size to fit container with 4:3 ratio
+//     ifrm.style.width = "100%";
+//     ifrm.style.height = "75%";
+//     // append iframe to video container
+//     videoContainer.append(ifrm);
+// }
 
-function youtubeApi(query) {
-    var key = "AIzaSyD03GgsQRd4u-bPDRH7t_-yT9LEhAPUC5E";
-    var query = query;
-    var URL = 'https://youtube.googleapis.com/youtube/v3/search?';
+// function youtubeApi(query) {
+//     var key = "AIzaSyD03GgsQRd4u-bPDRH7t_-yT9LEhAPUC5E";
+//     var query = query;
+//     var URL = 'https://youtube.googleapis.com/youtube/v3/search?';
 
-    var options = {
-        part: 'snippet',
-        key: key,
-        maxResults: 1,
-        q: query,
-        type: "video",
-        videoEmbeddable: "true"
-    }
+//     var options = {
+//         part: 'snippet',
+//         key: key,
+//         maxResults: 1,
+//         q: query,
+//         type: "video",
+//         videoEmbeddable: "true"
+//     }
 
-    $.getJSON(URL, options).then(function (data) {
-        var videoId = data.items[0].id.videoId;
-        console.log("Video ID: " + videoId);
-        createIframe(videoId);
-    });
-}
+//     $.getJSON(URL, options).then(function (data) {
+//         var videoId = data.items[0].id.videoId;
+//         console.log("Video ID: " + videoId);
+//         createIframe(videoId);
+//     });
+// }
 
 // youtubeApi("taylor swift");
 
 
-function getMovieInfo(movieQuery) {  
+function getMovieInfo(movie) {
 
     // clear out video container
     videoContainer.innerHTML = "";
@@ -77,16 +73,17 @@ function getMovieInfo(movieQuery) {
 
     var imdbApiKey = "k_ta4dd4a1";
     // template literal for api url with api key and movie title
-    var titleApiURL = `https://imdb-api.com/en/API/SearchMovie/${imdbApiKey}/${movieQuery}`;
+    var titleApiURL = `https://imdb-api.com/en/API/SearchMovie/${imdbApiKey}/${movie}`;
 
     fetch(titleApiURL)
         .then(function (response) {
             response.json()
                 .then(function (data) {
                     //console.log(data);
+                    saveMovies(movie);
                     // get movie Id from data
                     var movieId = data.results[0].id;
-                   // console.log("Movie ID: " + movieId);
+                    // console.log("Movie ID: " + movieId);
                     // use movie id in api url
                     var idApiURL = `https://imdb-api.com/en/API/Title/${imdbApiKey}/${movieId}`;
                     // get movie star from data
@@ -96,9 +93,9 @@ function getMovieInfo(movieQuery) {
                                 .then(function (data) {
                                     // movie star
                                     var star = data.actorList[0].name;
-                                   // console.log("Star: " + star);
+                                    // console.log("Star: " + star);
                                     // retrieve interview video from youtube for the movie star
-                                    youtubeApi(star + "interview");
+                                    // youtubeApi(star + "interview");
 
                                     // movie poster
 
@@ -123,7 +120,6 @@ function saveMovies(movie) {
     if (movies.indexOf(movie) !== -1) {
         return;
     }
-
     // push movie into movies array
     movies.push(movie);
     // save movies array to local storage
@@ -135,8 +131,8 @@ function saveMovies(movie) {
 function createHistoryBtns() {
     // clear out past searches div before running loop
     pastSearches.innerHTML = "";
-    // loop over movies array
-    for (let index = 0; index < movies.length; index++) {
+    // loop over movies array in reverse order to show most recent search first
+    for (let index = movies.length - 1; index >= 0; index--) {
         // create button for each movie in array
         var pastSearchButton = document.createElement('button');
         pastSearchButton.innerText = movies[index];
@@ -168,13 +164,13 @@ function loadHistory() {
 // Event listeners
 searchForm.addEventListener('submit', handleInputSubmit);
 
-clearBtn.addEventListener('click', function(){
+clearBtn.addEventListener('click', function () {
     // clear local storage and html
     localStorage.clear();
     pastSearches.innerHTML = "";
-    posterContainer.innerHTML ="";
+    posterContainer.innerHTML = "";
     videoContainer.innerHTML = "";
-    
+
 })
 
 pastSearches.addEventListener('click', function (event) {

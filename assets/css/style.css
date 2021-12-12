@@ -1,4 +1,26 @@
 body {
-    background-image: url("../images/film-background.jpeg");
+    background-color: black;
     
 }
+
+h2 {
+    justify-content: space-around;
+    display:flex;
+    flex-wrap: wrap;
+    font-style: bold;
+    font-size: 950%;
+    font-family: 'Cookie', cursive;
+    background-image: url("../images/film-background.jpeg");
+    background-size: cover;
+    background-position: center;
+    color: orange;
+  
+  }
+
+    input {
+    color: whitesmoke;
+  }
+
+  h4 {
+      color: white;
+  }
