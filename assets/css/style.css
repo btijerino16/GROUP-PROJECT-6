@@ -1,7 +1,8 @@
 h2 {
+
     font-style: bold;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-      font-size: 650%;
+    
+      font-size: 950%;
       text-align: center;
       flex-wrap: wrap;
       background-image: url("../images/film-background.jpeg");
@@ -12,16 +13,23 @@ h2 {
   
   }
 
-  body {
-      background-color: black;
+body {
+    background-color: black;
+}
+
+  
+  input {
+    color: #f00;
   }
 
-  .button {
-      font-size: large;
-      color: ghostwhite;
+  h4 {
+      color: blanchedalmond;
+      justify-content: center;
   }
-  
-  .input-field input[type=text] {
-      color: floralwhite;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  .pastSearches {
+
+
+
+
   }

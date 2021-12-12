@@ -2,68 +2,62 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <title>Movie Buff</title>
+  <title>Movie Buff</title>
 
 </head>
 
 <body>
-    <!-- Header -->
-    <header>
- <div class="card-panel grey lighten-4">
-     <div class id= "image background">
- <h2 class="center">Movie Buff!</h2>
- </div>
- </div>
-</header>
+  <!-- Header -->
+  <header>
+    <div class="card-panel grey lighten-4">
+      <div class id="image background">
+        <h2 class="center">M o v i e B u f f</h2>
+      </div>
+    </div>
+  </header>
 
-    
 
-    
-        <!-- Test -->
+  <div class="split left">
+    <div class="centered">
+      <form id="searchForm">
         <div class="row">
-            <form class="col s12">
-                    <div class="input-field col s6">
-
-                        <input type="text" id="actor list">
-                        <button onclick="addLi()">
-                          <i class="small material-icons">local_movies</i>
-                          Search</button>
-                        
-                        <label for="first_name"></label>
-                    
-                    </form>
-                    </div>
-                </div>
-
-                  
-                        <div class="center-align col s12 col m9" id="videoContainer">
-                    </div>
-                    
+          <div class="input-field"></div>
+          <span><h4>Search Movie</h4></span>
+          <input placeholder="Movie" id="search-it" type="text">
 
 
-                    
+  <!-- Clear Button-->
+
+  <button class="btn #424242 grey darken-3 hide" id="clearBtn">Clear <i class="material-icons">cancel</i></button>
+  </div>
+  <!--Past searches section-->
+  <div id="pastSearches"></div>
+  
+  <div class="split right">
+    <div class="centered">
+  <section class="center-align col s12 col m9" id="movieContent">
+    <div class="video-container" id="videoContainer">
 
 
+      <!-- poster container-->
+      <div class="center-align" id="posterContainer">
 
+  </section>
+  </div>
+  </div>
 
+  <script src="https://apis.google.com/js/api.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="assets/js/script.js"></script>
 
-
-
-
-
-
-              
-
-
-
-    </main>
+  </main>
 
 </body>
 
