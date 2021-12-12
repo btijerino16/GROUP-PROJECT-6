@@ -1,9 +1,9 @@
-.hfont {
- font-family: cursive;
-}
+/* Banner CSS*/
 
-/* h2 banner */
-h2 {
-    background-image: url('../images/Film_strip.svg');
+header {
+    background-image: url('../images/film\ reel\ 2.jpg');
     background-position: center;
 }
+.hfont {
+    font-family: cursive;
+   }
