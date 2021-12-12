@@ -138,13 +138,14 @@ function createHistoryBtns() {
     // loop over movies array
     for (let index = 0; index < movies.length; index++) {
         // create button for each movie in array
-        var pastSearchButton = document.createElement('button');
+        var pastSearchButton = document.createElement('button')
         pastSearchButton.innerText = movies[index];
         // set button class
         pastSearchButton.setAttribute("class", "waves-effect waves-light btn");
         // set button style
         pastSearchButton.style.width = "100%";
         pastSearchButton.style.margin = "2px";
+        pastSearchButton.style.backgroundColor='orange';
         // set button data attribute
         pastSearchButton.setAttribute("data-value", movies[index]);
         // append buttons to past searches div

@@ -19,7 +19,7 @@ body {
 
   
   input {
-    color: #f00;
+    color: whitesmoke;
   }
 
   h4 {
@@ -27,9 +27,4 @@ body {
       justify-content: center;
   }
 
-  .pastSearches {
-
-
-
-
-  }
+  
