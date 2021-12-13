@@ -18,16 +18,22 @@
 
     </header>
 
-    <div class="row">
+    <main class="row">
         <!-- Search Form -->
-        <div class="row col s12 col m3">
+        <div class=" col s12 col m3">
 
-            <form id="searchForm">
-                <div class="row">
-                    <div class="input-field">
+            <form class="z-depth-2" id="searchForm">
+                <div>
+                    <div >
                         <h4>Search Here: </h4>
-                        <input placeholder="Movie" id="search-it" type="text">
+                        <div class="row">
+                            <input placeholder="Movie" id="search-it" type="text" class="input-field">
+                            <button class="btn-floating pulse btn" id="modal1">
+                                <!-- Added Icon image to button -->
+                                <i class="small material-icons">local_movies</i>
+                            </button>
 
+                        </div>
 
                     </div>
 
@@ -39,18 +45,19 @@
                 <div id="pastSearches"></div>
             </form>
         </div>
+   
 
-        <section class="center-align col s12 col m9" id="movieContent">
-            <!-- video container  -->
-            <div class="video-container" id="videoContainer"></div>
+    <section class="center-align col s12 col m9" id="movieContent">
+        <!-- video container  -->
+        <div class="video-container" id="videoContainer"></div>
 
-            <!-- poster container-->
-            <div class="center-align" id="posterContainer"></div>
+        <!-- poster container-->
+        <div class="center-align" id="posterContainer"></div>
 
-        </section>
+    </section>
 
-    </div>
-
+   
+ </main>
     <script src="https://apis.google.com/js/api.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="assets/js/script.js"></script>

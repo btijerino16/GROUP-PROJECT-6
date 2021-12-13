@@ -3,12 +3,12 @@ body {
     
 }
 
-h2 {
+header {
     justify-content: space-around;
     display:flex;
     flex-wrap: wrap;
     font-style: bold;
-    font-size: 950%;
+    font-size: xx-large;
     font-family: 'Cookie', cursive;
     background-image: url("../images/film-background.jpeg");
     background-size: cover;
