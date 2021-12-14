@@ -1,5 +1,6 @@
 # Movie Buffs!
 
+
 ## [link to page](https://btijerino16.github.io/movie-buff/)
 
 
@@ -13,10 +14,3 @@ So that I can keep up-to-date with their work
 Our app utilizes javascript, materialize css framework, IMDB api, and youtube API v3
 ##  Demo Screenshot:
 ![screenshot](https://github.com/btijerino16/movie-buff/blob/michael/assets/images/Screenshot%202021-12-13%20201149.png?raw=true)
-
-
-
-
-
-
-
