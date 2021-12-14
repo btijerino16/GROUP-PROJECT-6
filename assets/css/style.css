@@ -1,27 +1,40 @@
-h2 {
+body {
+    background-color: black;
+    
+}
+
+header {
+    justify-content: space-around;
+    display:flex;
+    flex-wrap: wrap;
     font-style: bold;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-      font-size: 650%;
-      text-align: center;
-      flex-wrap: wrap;
-      background-image: url("../images/film-background.jpeg");
-  background-size: cover;
-  background-position: center;
-  color: orange;
-  position: sticky;
+    
+    font-family: 'Cookie', cursive;
+    background-image: url("../images/film-background.jpeg");
+    background-size: cover;
+    background-position: center;
+    color: orange;
   
   }
 
-  body {
-      background-color: black;
+    input {
+    color: whitesmoke;
   }
 
-  .button {
-      font-size: large;
-      color: ghostwhite;
+  h4 {
+      color: white;
   }
-  
-  .input-field input[type=text] {
-      color: floralwhite;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  h2 {
+    font-size: 100px;
   }
+  .d1 {
+    display:flexbox;
+    padding-left: 50px;
+    padding-top: 30px;
+}
+
+/* Button Element */
+.input-field {
+    display: flex;
+}
