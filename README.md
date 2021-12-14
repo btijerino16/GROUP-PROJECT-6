@@ -1,7 +1,16 @@
-## Movie Buff
+# Movie Buffs!
 
 
+## [link to page](https://btijerino16.github.io/movie-buff/)
 
-As a movie-goer,
-I want to get more information on an actor by searching his name on an application
 
+# User Story: 
+
+As a movie-goer
+I want to know about more about the main-stars of a movie 
+So that I can keep up-to-date with their work
+
+## Technologies Used:
+Our app utilizes javascript, materialize css framework, IMDB api, and youtube API v3
+##  Demo Screenshot:
+![screenshot](https://github.com/btijerino16/movie-buff/blob/michael/assets/images/Screenshot%202021-12-13%20201149.png?raw=true)

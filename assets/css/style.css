@@ -1,0 +1,40 @@
+body {
+    background-color: black;
+    
+}
+
+header {
+    justify-content: space-around;
+    display:flex;
+    flex-wrap: wrap;
+    font-style: bold;
+    
+    font-family: 'Cookie', cursive;
+    background-image: url("../images/film-background.jpeg");
+    background-size: cover;
+    background-position: center;
+    color: orange;
+  
+  }
+
+    input {
+    color: whitesmoke;
+  }
+
+  h4 {
+      color: white;
+  }
+
+  h2 {
+    font-size: 100px;
+  }
+  .d1 {
+    display:flexbox;
+    padding-left: 50px;
+    padding-top: 30px;
+}
+
+/* Button Element */
+.input-field {
+    display: flex;
+}

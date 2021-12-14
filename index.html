@@ -1,13 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <title>Show Tunes</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <title>Movie Buff</title>
 </head>
+
 <body>
-    
+    <!-- Header -->
+    <header class="card-panel grey lighten-4">
+        <h2 class="center">Movie Buff!</2>
+
+    </header>
+
+    <main class="row">
+        <!-- Search Form -->
+        <div class=" col s12 col m3">
+
+            <form class="z-depth-2" id="searchForm">
+                <div>
+                    <div >
+                        <h4>Search Here: </h4>
+                        <div class="row">
+                            <input placeholder="Movie" id="search-it" type="text" class="input-field">
+                            <button class="btn-floating pulse btn #3949ab indigo darken-1" id="modal1">
+                                <!-- Added Icon image to button -->
+                                <i class="small material-icons">local_movies</i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Clear Button-->
+                    <button class="btn #424242 grey darken-3" id="clearBtn">Clear <i
+                            class="material-icons">cancel</i></button>
+                </div>    
+                
+            </form>
+            <!--Past searches section-->
+            <div id="pastSearches"></div>
+        </div>
+   
+
+    <section class="center-align col s12 col m9" id="movieContent">
+        <!-- video container  -->
+        <div class="video-container" id="videoContainer"></div>
+
+
+    </section>
+
+   
+ </main>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
 </body>
+
 </html>
