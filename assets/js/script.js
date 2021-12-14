@@ -25,43 +25,39 @@ function handleInputSubmit(event) {
     searchInput.value = "";
 }
 
-// function createIframe(videoId) {
-//     var ifrm = document.createElement("iframe");
-//     apiURL = `https://www.youtube.com/embed/${videoId}`;
-//     ifrm.setAttribute("src", (apiURL));
-//     // ifrm.style.width = "640px";
-//     // ifrm.style.height = "480px";
-//     // document.body.appendChild(ifrm);
+function createIframe(videoId) {
+    var ifrm = document.createElement("iframe");
+    apiURL = `https://www.youtube.com/embed/${videoId}`;
+    ifrm.setAttribute("src", (apiURL));
+    // set video size to fit container with 4:3 ratio
+    ifrm.style.width = "100%";
+    ifrm.style.height = "75%";
+    // append iframe to video container
+    videoContainer.append(ifrm);
+}
 
-//     // set video size to fit container with 4:3 ratio
-//     ifrm.style.width = "100%";
-//     ifrm.style.height = "75%";
-//     // append iframe to video container
-//     videoContainer.append(ifrm);
-// }
+function youtubeApi(query) {
+    var key = "AIzaSyD03GgsQRd4u-bPDRH7t_-yT9LEhAPUC5E";
+    var query = query;
+    var URL = 'https://youtube.googleapis.com/youtube/v3/search?';
 
-// function youtubeApi(query) {
-//     var key = "AIzaSyD03GgsQRd4u-bPDRH7t_-yT9LEhAPUC5E";
-//     var query = query;
-//     var URL = 'https://youtube.googleapis.com/youtube/v3/search?';
+    var options = {
+        part: 'snippet',
+        key: key,
+        maxResults: 1,
+        q: query,
+        type: "video",
+        videoEmbeddable: "true"
+    }
 
-//     var options = {
-//         part: 'snippet',
-//         key: key,
-//         maxResults: 1,
-//         q: query,
-//         type: "video",
-//         videoEmbeddable: "true"
-//     }
+    $.getJSON(URL, options).then(function (data) {
+        var videoId = data.items[0].id.videoId;
+        //console.log("Video ID: " + videoId);
+        createIframe(videoId);
+    });
+}
 
-//     $.getJSON(URL, options).then(function (data) {
-//         var videoId = data.items[0].id.videoId;
-//         console.log("Video ID: " + videoId);
-//         createIframe(videoId);
-//     });
-// }
 
-// youtubeApi("taylor swift");
 
 
 function getMovieInfo(movie) {
@@ -95,7 +91,7 @@ function getMovieInfo(movie) {
                                     var star = data.actorList[0].name;
                                     // console.log("Star: " + star);
                                     // retrieve interview video from youtube for the movie star
-                                    // youtubeApi(star + "interview");
+                                    youtubeApi(star + "interview");
 
                                     // movie poster
 
@@ -141,6 +137,7 @@ function createHistoryBtns() {
         // set button style
         pastSearchButton.style.width = "100%";
         pastSearchButton.style.margin = "2px";
+        pastSearchButton.style.backgroundColor = "orange";
         // set button data attribute
         pastSearchButton.setAttribute("data-value", movies[index]);
         // append buttons to past searches div
@@ -173,7 +170,7 @@ clearBtn.addEventListener('click', function () {
     movies = [];
     
 })
-
+// past search buttons
 pastSearches.addEventListener('click', function (event) {
     // use data attribute to get movie info
     var pastMovieSearch = event.target.getAttribute('data-value');
