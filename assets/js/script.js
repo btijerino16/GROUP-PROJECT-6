@@ -74,13 +74,13 @@ function getMovieInfo(movie) {
     var imdbApiKey = "k_ta4dd4a1";
     // template literal for api url with api key and movie title
     var titleApiURL = `https://imdb-api.com/en/API/SearchMovie/${imdbApiKey}/${movie}`;
-
+  saveMovies(movie);
     fetch(titleApiURL)
         .then(function (response) {
             response.json()
                 .then(function (data) {
                     //console.log(data);
-                    saveMovies(movie);
+                  
                     // get movie Id from data
                     var movieId = data.results[0].id;
                     // console.log("Movie ID: " + movieId);
@@ -163,14 +163,15 @@ function loadHistory() {
 
 // Event listeners
 searchForm.addEventListener('submit', handleInputSubmit);
-
+// clear button
 clearBtn.addEventListener('click', function () {
     // clear local storage and html
-    localStorage.clear();
+    localStorage.removeItem("movies");
     pastSearches.innerHTML = "";
     posterContainer.innerHTML = "";
     videoContainer.innerHTML = "";
-
+    movies = [];
+    
 })
 
 pastSearches.addEventListener('click', function (event) {

@@ -33,14 +33,31 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <input placeholder="Movie" id="search-it" type="text" class="validate">
-                        <!-- Button Element -->
+                        <!-- Search Button Element -->
                         <button class="btn-floating pulse btn" id="modal1">
                             <!-- Added Icon image to button -->
                             <i class="small material-icons">local_movies</i>
                         </button>
-                        <label for="first_name"></label>
                     </div>
+                    <div>
+                    <!-- Clear Button Element -->
+                    <button class="btn #424242 grey darken-3" id="clearBtn">
+                                        Clear 
+                        <i class="material-icons">cancel</i></button>
+                    </div>
+                    <div id="pastSearches"></div>
             </form>
+            </div>
+
+            <section class="center-align col s12 col m9" id="movieContent">
+                <!-- video container  -->
+                <div class="video-container" id="videoContainer"></div>
+        
+                <!-- poster container-->
+                <div class="center-align" id="posterContainer"></div>
+        
+            </section>
+        
     </main>
 
     
