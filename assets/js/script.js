@@ -82,7 +82,7 @@ function getMovieInfo(movie) {
                     // console.log("Movie ID: " + movieId);
                     // use movie id in api url
                     var idApiURL = `https://imdb-api.com/en/API/Title/${imdbApiKey}/${movieId}`;
-                    // get movie star from data
+
                     fetch(idApiURL)
                         .then(function (response) {
                             response.json()
@@ -107,7 +107,6 @@ function getMovieInfo(movie) {
                         })
                 })
         })
-
 };
 
 // save movies to local storage

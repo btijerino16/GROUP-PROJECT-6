@@ -23,11 +23,3 @@ Blake Georgii, Bianca Tijerino, Michael Walker, Sam Waris
 ### [Sam Waris@github](https://github.com/giyu1)
 ##  Demo Screenshot:
 ![screenshot](/assets/images/movie-buff-screenshot.png)
-
-
-
-
-
-
-
-
