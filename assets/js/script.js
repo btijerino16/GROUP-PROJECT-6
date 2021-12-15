@@ -25,44 +25,6 @@ function handleInputSubmit(event) {
     searchInput.value = "";
 }
 
-// function createIframe(videoId) {
-//     var ifrm = document.createElement("iframe");
-//     apiURL = `https://www.youtube.com/embed/${videoId}`;
-//     ifrm.setAttribute("src", (apiURL));
-//     // ifrm.style.width = "640px";
-//     // ifrm.style.height = "480px";
-//     // document.body.appendChild(ifrm);
-
-//     // set video size to fit container with 4:3 ratio
-//     ifrm.style.width = "100%";
-//     ifrm.style.height = "75%";
-//     // append iframe to video container
-//     videoContainer.append(ifrm);
-// }
-
-// function youtubeApi(query) {
-//     var key = "AIzaSyD03GgsQRd4u-bPDRH7t_-yT9LEhAPUC5E";
-//     var query = query;
-//     var URL = 'https://youtube.googleapis.com/youtube/v3/search?';
-
-//     var options = {
-//         part: 'snippet',
-//         key: key,
-//         maxResults: 1,
-//         q: query,
-//         type: "video",
-//         videoEmbeddable: "true"
-//     }
-
-//     $.getJSON(URL, options).then(function (data) {
-//         var videoId = data.items[0].id.videoId;
-//         console.log("Video ID: " + videoId);
-//         createIframe(videoId);
-//     });
-// }
-
-// youtubeApi("taylor swift");
-
 
 function getMovieInfo(movie) {
 
@@ -180,3 +142,5 @@ pastSearches.addEventListener('click', function (event) {
     //console.log(pastMovieSearch);
     getMovieInfo(pastMovieSearch);
 })
+
+
